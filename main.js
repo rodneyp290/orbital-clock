@@ -26,12 +26,12 @@ $(document).ready(function(){
   var moon = new Planet(
     canvas, 6, 40, HOUR,
     function() { return earth.getPosition(); }, "#AAAAAA"
-  )
+  );
 
   var satelite = new Planet(
     canvas, 2, 25, MINUTE,
     function() { return earth.getPosition();}, "#AAAA00"
-  )
+  );
 
   function draw() {
     context.clearRect(0, 0, canvas.width, canvas.height);
