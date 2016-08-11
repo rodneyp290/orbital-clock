@@ -17,8 +17,8 @@ Planet.prototype.getPosition = function() {
                    - ( (ms_past_midnight % this.orbit_time)/ this.orbit_time * 2 * Math.PI));
     var orbit_origin = this.orbit_origin_func();
 
-    var x = orbit_origin.x + Math.sin(orbit_angle) * this.orbit_radius;
-    var y = orbit_origin.y + Math.cos(orbit_angle) * this.orbit_radius;
+    var x = orbit_origin.x + Math.cos(orbit_angle) * this.orbit_radius;
+    var y = orbit_origin.y - Math.sin(orbit_angle) * this.orbit_radius;
 
     return { "x": x, "y": y};
 
